@@ -1,0 +1,30 @@
+import { threadId } from "worker_threads"
+
+var leitor = require('readline-sync')
+class Carro{
+    motor: number
+    rodas: number
+    marca: string
+    cor: string
+    km: string
+
+    constructor(motor: number, rodas: number, marca: string, cor: string, km: string){
+        this.motor = motor
+        this.rodas = rodas
+        this.marca = marca
+        this.cor = cor
+        this.km = km
+    }
+    digirir(){
+        console.log(`Estou dirigindo minha ${this.marca}`);
+    }
+}
+
+var motorNovo = leitor.questionFloat("Qual seu tipo de motor? ")
+var rodasNovo = leitor.questionFloat("Qual o aro da roda do carro? ")
+var marcaNovo = leitor.questionFloat("Qual a marca do carro? ")
+var corNovo = leitor.questionFloat("Qual a cor do carro? ")
+var kmNovo = leitor.questionFloat("Qual a kilometragem maxima? ")
+
+var carroNovo = new Carro(motorNovo, rodasNovo, marcaNovo, corNovo, kmNovo)
+console.log(carroNovo)
